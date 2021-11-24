@@ -1,0 +1,24 @@
+create table if not exists vk_kandidat(
+id serial primary key,
+kandidat_id integer not null,
+first_name varchar(20),
+last_name varchar(20),
+bdate varchar(10),
+city varchar(20),
+relation varchar(30),
+url_account text,
+url_photo1 text,
+url_photo2 text,
+url_photo3 text,
+bloked varchar(10)
+);
+
+create table if not exists vk_users(
+id serial primary key,
+user_id integer not null
+);
+
+create table if not exists vk_users_vk_kandidat(
+id_user integer references vk_users(id),
+id_kandidat integer references vk_kandidat(id)
+);

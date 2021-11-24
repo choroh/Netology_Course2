@@ -1,0 +1,6 @@
+requests
+json
+sqlalchemy
+psycopg2
+operator
+vk_api
